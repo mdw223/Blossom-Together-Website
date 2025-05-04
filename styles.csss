@@ -1,0 +1,14 @@
+/* Default dark mode style */
+.dark-mode {
+
+}
+
+/* Example: Different dark mode style for h1 */
+.dark-mode h1 {
+    
+}
+
+/* Example: Different dark mode style for visited links */
+.dark-mode a:visited * {
+
+}

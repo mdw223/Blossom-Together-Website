@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blossom Together Trip To Africa</title>
+    <!-- contains the metadata of the page -->
+    <!-- "Blossom Together Trip To Africa" shows up in the tab bar -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet 1" href="styles.csss" />
+    <link rel="icon" href="img\blossom logo cropped transparent.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#event-schedule">Event Schedule</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#about-us">About us</a></li>
+        <li><a href="#rsvp" id="rsvp-navbar-button">RSVP</a></li>
+        <li><button id="theme-button">Dark Mode</button></li>
+      </ul>
+    </div>
+
+    <div class="header-container">
+      <div class="logo-title">
+        <img
+          src="img\blossom logo cropped transparent.png"
+          alt="btncsu logo"
+          id="title-logo"
+        />
+        <h1 id="title">Blossom Together Trip To Africa!<br /></h1>
+      </div>
+      <div class="catchphrase-container">
+        <h3 id="catchphrase">Let's Blossom Together🌹</h3>
+      </div>
+      <div class="header-item"></div>
+    </div>
+
+    <div class="button-list">
+      <button
+        class="link-button"
+        onclick="window.location.href='https://www.instagram.com/btncsu/'"
+      >
+        Instagram
+      </button>
+      <button
+        class="link-button"
+        onclick="window.location.href='https://linktr.ee/btncsu'"
+      >
+        Linktree
+      </button>
+    </div>
+
+    <div class="main-cont" id="about">
+      <div class="main-cont-hor">
+        <div class="main-text">
+          <h2 class="white-text">
+            🌍✨ Ready for the adventure of a lifetime?
+          </h2>
+          <p class="white-text">
+            <br />
+            Join Blossom Together this summer on a trip to Africa!
+          </p>
+
+          <div class="bullet-text">
+            <h4 class="white-text">
+              Mission Includes:
+              <ul>
+                <li>Visiting schools</li>
+                <li>Building waterwells</li>
+                <li>Performing cataract surgeries</li>
+                <li>Food & water distribution</li>
+              </ul>
+            </h4>
+          </div>
+          <div class="bullet-pic">
+            <img src="img\waterwell.jpg" alt="waterwell" id="waterwell" />
+          </div>
+          <p class="white-text">
+            You'll leave an unforgettable impact while creating memories you'll
+            cherish forever!<br /><br />
+            💼 Interested in joining us? Fill out our 🔗<a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfXZX7E2vpxE29eA6AMMLVqJbfdef03Nmm0rGG8xnBDWTSYTg/viewform"
+              >Interest Form</a
+            ><br />
+            today!
+          </p>
+        </div>
+        <div class="main-img">
+          <img
+            src="img\africa_trip_flyer.jpeg"
+            alt="africa trip flyer"
+            id="africa_trip_flyer"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="video-description-container">
+      <div class="slideshow-container">
+        <div class="slide active">
+          <div class="slide-text">
+            <h2>What a year it has been for Blossom Together! 🌹</h2>
+            <p>
+              2024 was filled with growth, hard work, and unforgettable
+              memories.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-text">
+            <ul>
+              <li>Trip to Burkina Faso 🇧🇫</li>
+              <li>Cleanups</li>
+              <li>Collaborating with clubs on campus</li>
+              <li>Community Impact Award in Chicago</li>
+              <li>
+                Meeting the NC State Chancellor & representatives in Congress
+              </li>
+              <li>Monthly GBMs, socials, and hangouts</li>
+            </ul>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-text">
+            <p>
+              We are so grateful for every single person who supported us,
+              volunteered, and helped bring our vision to life.
+            </p>
+            <h4>Let's continue to Blossom Together!🌹✨🙏🏼</h4>
+          </div>
+        </div>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <div class="video">
+        <iframe
+          src="https://www.instagram.com/reel/DEVJFPuJX29/embed"
+          class="insta-reel"
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="event-schedule">
+      <h2>Event Schedule</h2>
+      <p>
+        Come out to our clean-ups to help us raise funds for our Humanitarian
+        efforts!
+      </p>
+      <div class="schedule-image-container">
+        <img alt="schedule" src="img/schedule.jpg" class="schedule-image" />
+      </div>
+    </div>
+
+    <div class="slides-container">
+      <div class="slides-page fade">
+        <div class="slides-text">
+          <h3>How to join our Summer Trip!</h3>
+          <p>Must meet 3 requirements...</p>
+        </div>
+        <div class="slides-img">
+          <img alt="clean up" src="img\clean-up-2.jpeg" style="width: 400px" />
+        </div>
+      </div>
+      <div class="slides-page fade">
+        <div class="slides-text">
+          <h3>Attend 3 Clean-Ups</h3>
+          <p>
+            We will be cleaning up NCSU's tailgate lots @12PM on Nov 3rd, 10th,
+            and 17th
+          </p>
+        </div>
+        <div class="slides-img">
+          <img alt="clean up" src="img\clean-up-1.jpeg" style="width: 400px" />
+        </div>
+      </div>
+      <div class="slides-page fade">
+        <div class="slides-text">
+          <h3>Attend 3 GBM's</h3>
+          <p>
+            Come out to our GBM's in Talley @6pm on Dec 10th, Jan 12th, and Feb
+            15th
+          </p>
+        </div>
+        <div class="slides-img">
+          <img alt="gbm" src="img\gbm-1.jpg" style="width: 400px" />
+        </div>
+      </div>
+      <div class="slides-page fade">
+        <div class="slides-text">
+          <h3>Sign up for the Africa Trip</h3>
+          <p>Check out our links for the form!</p>
+        </div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="dot-container">
+        <span class="dot1" onclick="currentSlide(1)"></span>
+        <span class="dot1" onclick="currentSlide(2)"></span>
+        <span class="dot1" onclick="currentSlide(3)"></span>
+        <span class="dot1" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <!-- rsvp
+        Purpose:
+        - Section for users to sign up for the event
+        - Contains a form for users to input their information, 
+        and a list of other users who have signed up
+        -->
+    <div id="rsvp" class="rsvp-container">
+      <div class="rsvp-para">
+        <h2>RSVP</h2>
+        <p>
+          Interested in learning more about the trip? RSVP to join our Zoom
+          meeting for details!<br />
+          When: March 11 @8pm
+        </p>
+      </div>
+      <div style="display: block">
+        <div class="rsvp-participants">
+          <p>🌹 Fatima has RSVP'd.</p>
+          <p>🌹 Ahmed has RSVP'd.</p>
+          <p>🌹 Zeynep has RSVP'd.</p>
+          <div class="participants">
+            <!-- RSVPs go here -->
+          </div>
+          <br />
+          <p id="rsvp-count">🌹3 people have RSVP'd to this event!</p>
+        </div>
+        <!--- Sign RSVP Form --->
+        <div class="form-container">
+          <form id="rsvp-form" title="rsvp-form">
+            <input type="text" id="fname" placeholder="First Name" required />
+            <input type="text" id="lname" placeholder="Last Name" required />
+            <input
+              type="text"
+              id="contact"
+              placeholder="Mobile number"
+              required
+            />
+            <input type="text" id="email" placeholder="Email" required />
+            <button type="button" id="rsvp-button" class="general-button">
+              RSVP
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- success 
+        Purpose:
+        - Modal that appears when a user successfully signs up for the event
+        - Contains a personalized message and image
+        -->
+    <div id="success-modal" class="modal">
+      <div class="modal-container">
+        <div id="modal-item-text">
+          <p id="modal-text"></p>
+        </div>
+        <div id="modal-item-img">
+          <img src="img\blossom logo cropped transparent.png" alt="" />
+        </div>
+        <div id="modal-item-button">
+          <button class="close-button">
+            <span class="material-icons">cancel</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="close-button">
+      <span class="material-icons">cancel</span>
+    </button>
+    <div class="footer">
+      <ul class="nav-links">
+        <li><a href="https://linktr.ee/btncsu/">LinkTree</a></li>
+        <li><a href="https://www.instagram.com/btncsu/">Instagram</a></li>
+        <li><button id="theme-button">Dark Mode</button></li>
+      </ul>
+    </div>
+
+    <div class="event-links" id="links">
+      <h2>Links</h2>
+      <a href="https://www.instagram.com/btncsu/">
+        <article>
+          <h3>BTNCSU Instagram</h3>
+          <p>Follow our instagram to stay up to date with us!</p>
+        </article>
+      </a>
+      <a href="https://linktr.ee/btncsu/">
+        <article>
+          <h3>BTNCSU Linktree</h3>
+          <p>Check out our linktree for all of our important informations!</p>
+        </article>
+      </a>
+    </div>
+
+    <div id="about-us"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
