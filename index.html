@@ -13,11 +13,10 @@
     />
   </head>
   <body>
-    <div class="navbar">
+    <div class="navbar" id="home">
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#event-schedule">Event Schedule</a></li>
-        <li><a href="#links">Links</a></li>
         <li><a href="#about-us">About us</a></li>
         <li><a href="#rsvp" id="rsvp-navbar-button">RSVP</a></li>
         <li><button id="theme-button">Dark Mode</button></li>
@@ -54,7 +53,7 @@
       </button>
     </div>
 
-    <div class="main-cont" id="about">
+    <div class="main-cont">
       <div class="main-cont-hor">
         <div class="main-text">
           <h2 class="white-text">
@@ -135,9 +134,9 @@
         </div>
 
         <div class="dot-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
 
@@ -199,15 +198,18 @@
           <h3>Sign up for the Africa Trip</h3>
           <p>Check out our links for the form!</p>
         </div>
+        <div class="slides-img">
+          <img alt="gbm" src="img\running.jpg" style="width: 400px" />
+        </div>
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <button class="prev" type="button">&#10094;</button>
+      <button class="next" type="button">&#10095;</button>
 
       <div class="dot-container">
-        <span class="dot1" onclick="currentSlide(1)"></span>
-        <span class="dot1" onclick="currentSlide(2)"></span>
-        <span class="dot1" onclick="currentSlide(3)"></span>
-        <span class="dot1" onclick="currentSlide(4)"></span>
+        <span class="dot1"></span>
+        <span class="dot1"></span>
+        <span class="dot1"></span>
+        <span class="dot1"></span>
       </div>
     </div>
 
@@ -226,33 +228,54 @@
           When: March 11 @8pm
         </p>
       </div>
-      <div style="display: block">
-        <div class="rsvp-participants">
-          <p>🌹 Fatima has RSVP'd.</p>
-          <p>🌹 Ahmed has RSVP'd.</p>
-          <p>🌹 Zeynep has RSVP'd.</p>
-          <div class="participants">
-            <!-- RSVPs go here -->
-          </div>
-          <br />
-          <p id="rsvp-count">🌹3 people have RSVP'd to this event!</p>
-        </div>
-        <!--- Sign RSVP Form --->
-        <div class="form-container">
-          <form id="rsvp-form" title="rsvp-form">
-            <input type="text" id="fname" placeholder="First Name" required />
-            <input type="text" id="lname" placeholder="Last Name" required />
-            <input
-              type="text"
-              id="contact"
-              placeholder="Mobile number"
-              required
-            />
-            <input type="text" id="email" placeholder="Email" required />
-            <button type="button" id="rsvp-button" class="general-button">
-              RSVP
-            </button>
-          </form>
+      <!--- Sign RSVP Form --->
+      <div class="form-inputs">
+        <form id="rsvp-form" title="rsvp-form">
+          <label for="fname">First Name:</label>
+          <input
+            type="text"
+            id="fname"
+            placeholder="First Name"
+            required
+            class="input-margin"
+          />
+          <label for="lname">Last Name:</label>
+          <input
+            type="text"
+            id="lname"
+            placeholder="Last Name"
+            required
+            class="input-margin"
+          />
+          <label for="contact">Mobile Number:</label>
+          <input
+            type="text"
+            id="contact"
+            placeholder="Mobile number"
+            required
+            class="input-margin"
+          />
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Email"
+            required
+            class="input-margin"
+          />
+          <button type="button" id="rsvp-button" class="general-button">
+            RSVP
+          </button>
+        </form>
+      </div>
+      <div class="rsvp-participants">
+        <p id="rsvp-count">🌹3 people have RSVP'd to this event!</p>
+        <br />
+        <p>🌹 Fatima has RSVP'd.</p>
+        <p>🌹 Ahmed has RSVP'd.</p>
+        <p>🌹 Zeynep has RSVP'd.</p>
+        <div class="participants">
+          <!-- RSVPs go here -->
         </div>
       </div>
     </div>
@@ -280,15 +303,19 @@
     <button class="close-button">
       <span class="material-icons">cancel</span>
     </button>
+
     <div class="footer">
       <ul class="nav-links">
+        <li>
+          <a href="#home" class="nav-button">Home</a>
+        </li>
         <li><a href="https://linktr.ee/btncsu/">LinkTree</a></li>
         <li><a href="https://www.instagram.com/btncsu/">Instagram</a></li>
         <li><button id="theme-button">Dark Mode</button></li>
       </ul>
     </div>
 
-    <div class="event-links" id="links">
+    <div class="event-links" id="about-us">
       <h2>Links</h2>
       <a href="https://www.instagram.com/btncsu/">
         <article>
@@ -303,8 +330,6 @@
         </article>
       </a>
     </div>
-
-    <div id="about-us"></div>
 
     <script src="index.js"></script>
   </body>

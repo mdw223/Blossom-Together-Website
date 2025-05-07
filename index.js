@@ -26,20 +26,15 @@ const participantsDiv = document.querySelector(".participants");
 const addParticipant = (person) => {
   console.log(person.firstName, person.lastName, person.phoneNumber, person.email);
 
+  // update counter
+  const rsvpCountElement = document.getElementById("rsvp-count");
+  count++;
+  rsvpCountElement.textContent = "🌹" + count + " people have RSVP'd to this event!";
+
   // add the participant name to the list 
   const newParticipantParagraph = document.createElement('p');
   newParticipantParagraph.textContent = "🌹 " + person.firstName + " has RSVP'd.";
   participantsDiv.appendChild(newParticipantParagraph);
-
-  // update counter
-  const rsvpCountElement = document.getElementById("rsvp-count");
-  rsvpCountElement.remove();
-  count++;
-  const newRsvpCountElement = document.createElement('p');
-  newRsvpCountElement.id = 'rsvp-count';
-  newRsvpCountElement.textContent = "🌹" + count + " people have RSVP'd to this event!";
-  const rsvpParticipantsDiv = document.querySelector(".rsvp-participants"); 
-  rsvpParticipantsDiv.appendChild(newRsvpCountElement);
 
   toggleModal(person);
 }
@@ -162,44 +157,51 @@ showSlides(slideIndex);
 let slidePage = 1; // the manual slides index
 showSlides(slidePage, 'slides-page');
 
+// n it how much we add to the slide index
 function plusSlides(n, slideClass='slide') {
     if (slideClass === 'slides-page') {
-      showSlides(slidePage += n);
+      showSlides(slidePage += n, 'slides-page');
     } else {
       showSlides(slideIndex += n);
     }
 }
 
-function currentSlide(n, slideClass='slide') {
-    if (slideClass === 'slides-page') {
-      showSlides(slideIndex = n);
-    } else {
-      showSlides(slideIndex = n);
-    }
-}
-
 function showSlides(n, slideClass='slide') {
-    let slides = document.getElementsByClassName('slide');
-    let dots = document.getElementsByClassName('dot');
-    if (slideClass === 'slides-page') {
+    let slides;
+    let dots;
+    if (slideClass === 'slide') {
+      slides = document.getElementsByClassName('slide');
+      dots = document.getElementsByClassName('dot');
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+    } else if (slideClass === 'slides-page') {
       slides = document.getElementsByClassName("slides-page");
       dots = document.getElementsByClassName("dot1");
+      if (n > slides.length) {slidePage = 1}
+      if (n < 1) {slidePage = slides.length}
     }
     let i;
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    // makes the slides inactive 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         if (slideClass === 'slide') {
           slides[i].classList.remove('active');
         }
     }
+    // makes the dots inactive
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active-dot", "");
     }
-    slides[slideIndex-1].style.display = "flex";
-    slides[slideIndex-1].classList.add('active');
-    dots[slideIndex-1].className += " active-dot";
+    if (slideClass === 'slide') {
+      slides[slideIndex-1].style.display = "flex";
+      slides[slideIndex-1].classList.add('active');
+      dots[slideIndex-1].className += " active-dot";
+    } else if (slideClass === 'slides-page') {
+      slides[slidePage-1].style.display = "flex";
+      slides[slidePage-1].classList.add('active');
+      dots[slidePage-1].className += " active-dot";
+    }
+    
 }
 
 // Automatic slideshow (optional)
@@ -207,4 +209,15 @@ setInterval(() => {
     plusSlides(1);
 }, 5000); // Change slide every 5 seconds (5000 milliseconds)
 
-
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');
+nextButton.addEventListener('click', (event) => {
+  plusSlides(1, 'slides-page');
+  console.log("nextButton clicked!");
+  event.preventDefault();
+});
+prevButton.addEventListener('click', (event) => {
+  plusSlides(-1, 'slides-page');
+  console.log("prevButton clicked!");
+  event.preventDefault();
+});

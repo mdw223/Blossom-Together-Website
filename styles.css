@@ -343,6 +343,7 @@ iframe.insta-reel {
     gap: 20px;
     width: 100%;
     padding-bottom: 50px;
+    justify-content: space-evenly;
 }
 
 .rsvp-para {
@@ -358,7 +359,7 @@ iframe.insta-reel {
 /* Add other rsvp-related selectors here */
 .rsvp-participants {
     /* Set a maximum height for the div */
-    max-height: 150px; /* Adjust this value as needed */
+    max-height: 210px; /* Adjust this value as needed */
   
     /* Enable vertical scrolling when content overflows */
     overflow-y: auto;
@@ -513,6 +514,25 @@ iframe.insta-reel {
     transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
+.nav-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px; 
+    border: none;
+    font-family: serif;
+    padding: 5px 10px;
+    font-size: 1em;
+
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.nav-button:hover {
+    color: white !important;
+    background-color: #00000083;
+}   
+
 #theme-button:hover {
     background-color: #00000083; /* Darker blue on hover */
 }
@@ -624,7 +644,7 @@ iframe.insta-reel {
     width: 100%;
 }
 
-.dot {
+.dot, .dot1 {
     height: 10px;
     width: 10px;
     margin: 0 5px;
@@ -706,7 +726,7 @@ iframe.insta-reel {
       /* Optional: Style individual elements within the modal */
   }
 
-  .close-button {
+.close-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -717,17 +737,18 @@ iframe.insta-reel {
     position: absolute;
     top: 10px; /* Adjust vertical position */
     right: 10px; /* Adjust horizontal position */
-  }
+}
 
 
 
 
-  .slides-container {
+.slides-container {
     position: relative;
-    width: 100%;
+    width: 40%;
     margin: auto;
     padding-top: 2rem; /* Add padding to the top and bottom */
     padding-bottom: 2rem;
+    margin-bottom: 50px;
 }
 
 .slides-page {
@@ -769,7 +790,7 @@ iframe.insta-reel {
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -2rem; /* mt--8 */
+    margin-top: 0rem; /* mt--8 */
     padding: 1rem; /* p-4 */
     color: #fff;
     font-weight: bold;
@@ -786,4 +807,32 @@ iframe.insta-reel {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: label, input */
+    gap: 10px; /* Space between rows and columns */
+  }
+  
+  .label {
+    padding-top: 8px; /* Vertically align label text */
+    text-align: left;
+    width: 100%;
+  }
+  
+  .input {
+    margin-bottom: 100px; /* Remove default margin */
+  }
+  
+  .button[type="submit"] {
+    grid-column: 2; /* span the second column */
+  }
+#rsvp-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-margin {
+    margin-bottom: 5%;
 }
