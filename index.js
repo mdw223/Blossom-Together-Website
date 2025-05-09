@@ -100,6 +100,8 @@ rsvpButton.addEventListener('click', (event) => {
   }
 });
 
+
+
 /*** Modal ***
   Purpose:
   - Use this starter code to add a pop-up modal to your website.
@@ -110,6 +112,7 @@ const toggleModal = (person) => {
   const modalContainer = document.querySelector('.modal-container');
   const modalItem = document.getElementById('modal-item-text');
   const closeButton = document.querySelector('.close-button');
+  closeButton.style.display = "block";
   if (modal && modalContainer && modalItem && closeButton) {
     modal.style.display = "flex";
     modalItem.textContent = `Thank you ${person.firstName} so much for your interest!\nWe cannot wait to blossom together🌹`;
@@ -118,7 +121,6 @@ const toggleModal = (person) => {
       // Your code to close the element goes here
       clearInterval(intervalId);
       modal.style.display = "none";
-      console.log('Close button clicked!');
     });
     // else if they dont click it in 5 secs
     setTimeout(() => {

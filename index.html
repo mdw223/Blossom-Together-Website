@@ -14,13 +14,15 @@
   </head>
   <body>
     <div class="navbar" id="home">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#event-schedule">Event Schedule</a></li>
-        <li><a href="#about-us">About us</a></li>
-        <li><a href="#rsvp" id="rsvp-navbar-button">RSVP</a></li>
-        <li><button id="theme-button">Dark Mode</button></li>
-      </ul>
+      <div class="list">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#event-schedule">Event Schedule</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#rsvp" id="rsvp-navbar-button">RSVP</a></li>
+          <li><button id="theme-button">Dark Mode</button></li>
+        </ul>
+      </div>
     </div>
 
     <div class="header-container">
@@ -33,21 +35,6 @@
         <h1 id="title">Blossom Together NC State</h1>
         <h3 id="catchphrase">Let's Blossom Together🌹</h3>
       </div>
-    </div>
-
-    <div class="button-list">
-      <button
-        class="link-button"
-        onclick="window.location.href='https://www.instagram.com/btncsu/'"
-      >
-        Instagram
-      </button>
-      <button
-        class="link-button"
-        onclick="window.location.href='https://linktr.ee/btncsu'"
-      >
-        Linktree
-      </button>
     </div>
 
     <div class="main-cont">
@@ -81,8 +68,7 @@
             💼 Interested in joining us? Fill out our 🔗<a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfXZX7E2vpxE29eA6AMMLVqJbfdef03Nmm0rGG8xnBDWTSYTg/viewform"
               >Interest Form</a
-            ><br />
-            today!
+            ><br /><br />
           </p>
         </div>
         <div class="main-img">
@@ -157,50 +143,70 @@
     </div>
 
     <div class="slides-container">
-      <div class="slides-page fade">
-        <div class="slides-text">
-          <h3>How to join our Summer Trip!</h3>
-          <p>Must meet 3 requirements...</p>
+      <div class="button-box-left">
+        <button class="prev" type="button">
+          <span class="material-icons">chevron_left</span>
+        </button>
+      </div>
+
+      <div class="slides-pages">
+        <div class="slides-page fade">
+          <div class="slides-text">
+            <h3>How to join our Summer Trip!</h3>
+            <p>Must meet 3 requirements...</p>
+          </div>
+          <div class="slides-img">
+            <img
+              alt="clean up"
+              src="img\clean-up-2.jpeg"
+              style="width: 400px"
+            />
+          </div>
         </div>
-        <div class="slides-img">
-          <img alt="clean up" src="img\clean-up-2.jpeg" style="width: 400px" />
+        <div class="slides-page fade">
+          <div class="slides-text">
+            <h3>Attend 3 Clean-Ups</h3>
+            <p>
+              We will be cleaning up NCSU's tailgate lots @12PM on Nov 3rd,
+              10th, and 17th
+            </p>
+          </div>
+          <div class="slides-img">
+            <img
+              alt="clean up"
+              src="img\clean-up-1.jpeg"
+              style="width: 400px"
+            />
+          </div>
+        </div>
+        <div class="slides-page fade">
+          <div class="slides-text">
+            <h3>Attend 3 GBM's</h3>
+            <p>
+              Come out to our GBM's in Talley @6pm on Dec 10th, Jan 12th, and
+              Feb 15th
+            </p>
+          </div>
+          <div class="slides-img">
+            <img alt="gbm" src="img\gbm-1.jpg" style="width: 400px" />
+          </div>
+        </div>
+        <div class="slides-page fade">
+          <div class="slides-text">
+            <h3>Sign up for the Africa Trip</h3>
+            <p>Check out our links for the form!</p>
+          </div>
+          <div class="slides-img">
+            <img alt="gbm" src="img\running.jpg" style="width: 400px" />
+          </div>
         </div>
       </div>
-      <div class="slides-page fade">
-        <div class="slides-text">
-          <h3>Attend 3 Clean-Ups</h3>
-          <p>
-            We will be cleaning up NCSU's tailgate lots @12PM on Nov 3rd, 10th,
-            and 17th
-          </p>
-        </div>
-        <div class="slides-img">
-          <img alt="clean up" src="img\clean-up-1.jpeg" style="width: 400px" />
-        </div>
+
+      <div class="button-box-right">
+        <button class="next" type="button">
+          <span class="material-icons">navigate_next</span>
+        </button>
       </div>
-      <div class="slides-page fade">
-        <div class="slides-text">
-          <h3>Attend 3 GBM's</h3>
-          <p>
-            Come out to our GBM's in Talley @6pm on Dec 10th, Jan 12th, and Feb
-            15th
-          </p>
-        </div>
-        <div class="slides-img">
-          <img alt="gbm" src="img\gbm-1.jpg" style="width: 400px" />
-        </div>
-      </div>
-      <div class="slides-page fade">
-        <div class="slides-text">
-          <h3>Sign up for the Africa Trip</h3>
-          <p>Check out our links for the form!</p>
-        </div>
-        <div class="slides-img">
-          <img alt="gbm" src="img\running.jpg" style="width: 400px" />
-        </div>
-      </div>
-      <button class="prev" type="button">&#10094;</button>
-      <button class="next" type="button">&#10095;</button>
 
       <div class="dot-container">
         <span class="dot1"></span>
@@ -210,12 +216,6 @@
       </div>
     </div>
 
-    <!-- rsvp
-        Purpose:
-        - Section for users to sign up for the event
-        - Contains a form for users to input their information, 
-        and a list of other users who have signed up
-        -->
     <div id="rsvp" class="rsvp-container">
       <div class="rsvp-para">
         <h2>RSVP</h2>
@@ -225,54 +225,55 @@
           When: March 11 @8pm
         </p>
       </div>
-      <!--- Sign RSVP Form --->
-      <div class="form-inputs">
-        <form id="rsvp-form" title="rsvp-form">
-          <label for="fname">First Name:</label>
-          <input
-            type="text"
-            id="fname"
-            placeholder="First Name"
-            required
-            class="input-margin"
-          />
-          <label for="lname">Last Name:</label>
-          <input
-            type="text"
-            id="lname"
-            placeholder="Last Name"
-            required
-            class="input-margin"
-          />
-          <label for="contact">Mobile Number:</label>
-          <input
-            type="text"
-            id="contact"
-            placeholder="Mobile number"
-            required
-            class="input-margin"
-          />
-          <label for="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            placeholder="Email"
-            required
-            class="input-margin"
-          />
-          <button type="button" id="rsvp-button" class="general-button">
-            RSVP
-          </button>
-        </form>
-      </div>
-      <div class="rsvp-participants">
-        <p id="rsvp-count">🌹3 people have RSVP'd to this event!</p>
-        <br />
-        <p>🌹 Fatima has RSVP'd.</p>
-        <p>🌹 Ahmed has RSVP'd.</p>
-        <p>🌹 Zeynep has RSVP'd.</p>
-        <div class="participants">
-          <!-- RSVPs go here -->
+      <div class="participants-form">
+        <div class="form-inputs">
+          <form id="rsvp-form" title="rsvp-form">
+            <label for="fname">First Name:</label>
+            <input
+              type="text"
+              id="fname"
+              placeholder="First Name"
+              required
+              class="input-margin"
+            />
+            <label for="lname">Last Name:</label>
+            <input
+              type="text"
+              id="lname"
+              placeholder="Last Name"
+              required
+              class="input-margin"
+            />
+            <label for="contact">Mobile Number:</label>
+            <input
+              type="text"
+              id="contact"
+              placeholder="Mobile number"
+              required
+              class="input-margin"
+            />
+            <label for="email">Email:</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              required
+              class="input-margin"
+            />
+            <button type="button" id="rsvp-button" class="general-button">
+              RSVP
+            </button>
+          </form>
+        </div>
+        <div class="rsvp-participants">
+          <p id="rsvp-count">🌹3 people RSVP'd !</p>
+          <br />
+          <p>🌹 Fatima has RSVP'd.</p>
+          <p>🌹 Ahmed has RSVP'd.</p>
+          <p>🌹 Zeynep has RSVP'd.</p>
+          <div class="participants">
+            <!-- RSVPs go here -->
+          </div>
         </div>
       </div>
     </div>
@@ -292,7 +293,7 @@
         </div>
         <div id="modal-item-button">
           <button class="close-button">
-            <span class="material-icons">cancel</span>
+            <span class="material-icons modal-icon">cancel</span>
           </button>
         </div>
       </div>
@@ -306,8 +307,14 @@
         <li>
           <a href="#home" class="nav-button">Home</a>
         </li>
-        <li><a href="https://linktr.ee/btncsu/">LinkTree</a></li>
-        <li><a href="https://www.instagram.com/btncsu/">Instagram</a></li>
+        <li>
+          <a href="https://linktr.ee/btncsu/" class="nav-button">LinkTree</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/btncsu/" class="nav-button"
+            >Instagram</a
+          >
+        </li>
         <li><button id="theme-button">Dark Mode</button></li>
       </ul>
     </div>
