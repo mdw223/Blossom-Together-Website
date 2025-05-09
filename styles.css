@@ -36,6 +36,73 @@ p {
     font-size: 1.5em;
 }
 
+@media (max-width: 768px) {
+ #title {
+    font-size: 2em !important;
+ }
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  h6 {
+    font-size: 0.9em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .navbar ul li a, #rsvp-navbar-button, #theme-button {
+    font-size: 1em !important;
+    }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: 0.9em;
+  }
+
+  h6 {
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+}
+
 a,
 a * {
     
@@ -57,40 +124,10 @@ a :active {
     color: green;
 }
 
-
-#title-logo {
-    height: 6em; /* Adjust to match text height */  
-    width: auto;
-    object-fit: contain;
-    margin-right: 20px; /* Add spacing between image and text */
-} 
-
-#title {
-    font-size: 3rem;
-    font-family:serif;
-    font-weight: 500; /* Slightly less bold */
-    color: rgb(180, 0, 0);
-}
-
-.logo-title {
-     display: flex;
-     align-items: center;
-     justify-content: center; /* Centers horizontally */
-}
-
-#catchphrase {
-    text-align: center;
-    font-weight: 500;
-    font-family:serif;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    font-size: 1.5em;
-    font-style: italic;
-}
-
 .header-container {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+     align-items: center;
+     justify-content: center;  
     background-attachment: rgb(223, 216, 216);
     transition: transform 0.3s ease-in-out;
 }
@@ -98,6 +135,43 @@ a :active {
 .header-container:hover {
     transform: translateY(10px); /* Move down on hover */
 }
+
+#title-logo {
+    height: 6em; /* Adjust to match text height */  
+    width: auto;
+    object-fit: contain;
+}
+
+.title-catchphrase {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+}
+
+#title {
+    font-size: 3rem;
+    font-family:serif;
+    font-weight: 500; /* Slightly less bold */
+    color: rgb(180, 0, 0);
+    text-align: center;
+    margin-right: 0;
+    margin-left:0;
+    margin-bottom:0;
+
+}
+
+#catchphrase {
+    text-align: center;
+    font-weight: 500;
+    font-family:serif;
+    margin:0;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+
 
 .link-button {
     background-image: linear-gradient(to right, #027e18, #027e18);
@@ -281,6 +355,8 @@ p.white-text {
     .schedule-image-container {
       max-width: 95%; /* Take up more width on smaller screens */
     }
+
+
   }
 
 .video {
@@ -450,6 +526,10 @@ iframe.insta-reel {
     position: relative; /* For absolute positioning of the underline */
     padding-bottom: 3px; /* Space for the underline */
     font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .navbar ul li a::before {
@@ -486,7 +566,7 @@ iframe.insta-reel {
     border: none;
     font-family: serif;
     padding: 5px 10px;
-    /*font-size: 1em; */
+    font-size: 1.5em;
 
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
