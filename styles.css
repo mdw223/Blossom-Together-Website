@@ -249,7 +249,7 @@ a :active {
 }
 
 body {
-    background-color: rgb(245, 240, 240);
+    background-color: var(--bg-color);
     font-family:serif;
     font-weight: 500;
     font-size: 1em;
@@ -361,15 +361,16 @@ p.white-text {
 
 .footer {
     position: fixed;
-    left: 0;
     bottom: 0;
-    width: 100%;
+    width: 90%;
+    max-width: 900px;
     padding: 15px 0;
     text-align: center;
     z-index: 1000;
-
+    
     background-image: linear-gradient(to right, #027e18, #027e18);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 .footer .nav-links {
@@ -377,7 +378,6 @@ p.white-text {
     padding: 0;
     margin: 0;
     display: inline-block; /* Center the links */
-    
 }
 
 .footer .nav-links li {
@@ -388,28 +388,28 @@ p.white-text {
 .footer .nav-links li a {
     text-decoration: none;
     color:white;  
+    display: inline-block; /* Make the anchor a block-level element */
+    /*padding: 10px 15px;  Add padding to match button appearance */
 }
 
 .footer .nav-links li a:hover {
-    color:#b40000; /* Example hover color */
+    color:#b40000; 
 }
   
 
 :root {
+    --bg-clear: rgba(255, 255, 255, 0.1);
+    --bg-clear1: #555;
+
     /* Light Mode */
-    --bg-color: #a6a0cf;
-    --text-color: #231942;
+    --bg-slide-color:white;
+    --bg-color: rgb(245, 240, 240);
+    --text-color: black;
 
     /* Dark Mode */
-    --bg-color-dark-mode: #3e3377;
+    --bg-slide-color-dark-mode: rgba(0, 0, 0, 0.676);
+    --bg-color-dark-mode: black;
     --text-color-dark-mode: #fff;
-
-    /* Accent Colors */
-    --accent-color-light: #d2cff5;
-    --accent-color-medium: #684fb5;
-    --accent-color-dark: #482f95;
-    --accent-color-darkest: #231942;
-    --accent-color-green: #28eb76;
 
     /* Error Colors */
     --error-color: #f8bbd0;
@@ -432,7 +432,8 @@ p.white-text {
     display: flex;
     border-radius: 5px;
     align-items: center;
-    width: 90%;
+    width:90%;
+    max-width:900px;
     justify-content: space-evenly;
 }
 
@@ -499,7 +500,7 @@ p.white-text {
 
 
 #rsvp-navbar-button {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-clear);
     color: white;
     border-radius: 5px; 
     border: none;
@@ -549,28 +550,43 @@ p.white-text {
 
 .nav-button:hover {
     color: white !important;
-    background-color: #00000083;
+    background-color: var(--bg-color-dark-mode);
 }   
 
 #theme-button:hover {
-    background-color: #00000083; /* Darker blue on hover */
+    background-color: var(--bg-color-dark-mode); /* Darker blue on hover */
 }
 #theme-button:active {
-    background-color: #000000; /* Even darker blue on click */
+    background-color: var(--bg-color-dark-mode); /* Even darker blue on click */
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Slightly adjusted shadow */
   } 
 
 /* Customize Dark Mode Theme */
 .dark-mode {
-    background-color: black;
+    background-color: var(--bg-color-dark-mode);
 }
 
-.dark-mode #theme-button {
-    background-color: rgb(0, 0, 0);
+.dark-mode a {
+  color: var(--error-color);
 }
+
+.dark-mode #theme-button, .dark-mode #rsvp {
+    background-color: var(--bg-color-dark-mode);
+}
+
+.dark-mode .slide-text, .dark-mode .rsvp-para p, .dark-mode .rsvp-para h2, .dark-mode #rsvp-form label, .dark-mode .rsvp-participants p, 
+ .dark-mode .slide ul, .dark-mode .slide p, .dark-mode .slide h2{
+  color: var(--text-color-dark-mode);
+}
+
+.dark-mode .about-us-container, .dark-mode .form-inputs, .dark-mode .rsvp-participants,
+      .dark-mode .slideshow-container, .dark-mode .rsvp-para {
+        background-color: var(--bg-slide-color-dark-mode);
+        color: var(--text-color-dark-mode);
+      }
 
 .dark-mode #catchphrase, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4,  .dark-mode h5, .dark-mode h6, .dark-mode p {
-    color:white;
+    color:var(--text-color-dark-mode);
 }
 
 .video-description-container {
@@ -612,7 +628,7 @@ iframe.insta-reel {
     border-radius: 0.5rem; /* Rounded corners using Tailwind's scale */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-slide-color);
 }
 
 .slide {
@@ -833,6 +849,7 @@ iframe.insta-reel {
 }
 
 .rsvp-container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -881,7 +898,7 @@ iframe.insta-reel {
   gap: 15px;
 }
 #rsvp-form label {
-  color: #555;
+  color: var(--bg-clear1);
   margin-bottom: 5px;
   font-weight: bold;
   display: block;
@@ -1029,4 +1046,43 @@ iframe.insta-reel {
     display: none;
 }
 
+.about-us-container {
+  box-sizing: border-box;
+  background-color: var(--bg-slide-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
+.about-content {
+margin-bottom: 40px;
+text-align: center;
+line-height: 1.7;
+color: #555;
+
+}
+
+.about-content p {
+margin-bottom: 20px;
+font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .about-content p {
+        font-size: 1em;
+    }
+
+}
